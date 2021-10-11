@@ -1,0 +1,36 @@
+
+
+
+
+/* This is my first proper css file */
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+h1{
+    color:rgb(245, 11, 11);
+    font-family: 'Kanit', sans-serif;   
+}
+
+
+
+h3{
+    color:rgb(221, 61, 61);
+    font-family: 'Kanit', sans-serif;   
+}
+
+p{
+    color:rgb(255, 255, 255);
+    font-family: 'Kanit', sans-serif;
+}
+
+.chart{
+    background-color: white;
+    width:330px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+}
+
