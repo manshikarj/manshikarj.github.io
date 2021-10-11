@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "TITLE HERE",
-      "subtitle":"Sub-title here",
+      "text": "New COVID cases- London",
+      "subtitle": null,
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -11,19 +11,10 @@
     },
     
      "data": {
-      "url": "PASTE YOUR API HERE",
+      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=region&areaCode=E12000007&metric=newCasesByPublishDate&format=csv",
       "format": {"type": "csv"}
     },
   
-     "transform":[
-        
-        {"filter": {
-          "field": "VARIABLE TO FILTER HERE", 
-          "oneOf": ["X", "Y", "Z"]}
-          }
-  
-  
-      ],
     
     
     "height": 300,
@@ -36,14 +27,14 @@
       "x": {
         "field": "date",
         "type": "temporal",
-        "title": null,
+        "title": "month",
         "axis": {"grid": false}
       },
   
       "y": {
-        "field": "VARIABLE YOU ARE MEASURING HERE",
+        "field": "newCasesByPublishDate",
         "type": "quantitative",
-        "title": null,
+        "title": "new cases",
         "axis": {"grid": false}
       },
   
@@ -51,7 +42,7 @@
         "field": "areaName",
         "type": "nominal",
         "scale": {"scheme": "set1"},
-        "title": "LEGEND TITLE",
+        "title": null,
         "legend": {
           "orient": "top-left", 
           "fillColor": "#FcFdFd"}
