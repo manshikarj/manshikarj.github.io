@@ -3,7 +3,7 @@
 
 body{
     background-color: rgba(88, 84, 84, 0.842);
-    max-width: 500px;
+    max-width: auto;
     margin: auto;
 }
 
