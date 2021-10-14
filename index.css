@@ -23,30 +23,13 @@ h3{
 }
 
 
-h4{
-    color:rgb(221, 61, 61);
-    font-family: 'Varela Round', sans-serif;
-}
-
-
-h5{
-    color:rgb(221, 61, 61);
-    font-family: 'Varela Round', sans-serif;
-}
-
-
-h6{
-    color:rgb(221, 61, 61);
-    font-family: 'Varela Round', sans-serif;
-}
-
-
 .chart{
-    background-color: white;
-    width:330px;
+    width: 330px;
     border-width: 10px;
+    background-color: white;
     border-style: solid;
     border-radius: 5px;
     border-color: white;
+    margin: auto;
 }
 
