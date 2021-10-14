@@ -24,11 +24,11 @@ h3{
 
 
 .chart{
-    width: 400px;
+    width: 300px;
     border-width: 15px;
     background-color: white;
     border-style: solid;
-    border-radius: 8px;
+    border-radius: 5px;
     border-color: white;
     margin: auto;
 }
