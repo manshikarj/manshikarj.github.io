@@ -6,25 +6,24 @@
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-  
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-  
-<link rel="stylesheet" href="index.css">
-  
-<!--The next three lines allow the Vega embed-->
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        @import url('https://fonts.google.com/specimen/Varela+Round#standard-styles);
+    </style>
+
+    <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap');
-  </style>
-
 </head>
+
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
@@ -39,9 +38,6 @@
 </header>
 
 <h3>COVID-19 CASES - UK</h3>
-<p>Covid-19 cases (December 2020- Current) </p>
-
-
 <!--Chart 1 -->
   <div class="chart" id="chart1">
       <script>
@@ -50,6 +46,8 @@
       </script>
   </div>
 
+  
+ <h4> UK Productivity over time </h4>
 <!--Chart 2 -->
 <div class="chart" id="chart2">
     <script>
@@ -58,6 +56,7 @@
     </script>
 </div>
   
+  <h5> Innovation levels -OECD </h5>
  <!--Chart 3 -->
 <div class="chart" id="chart3">
   <script>
@@ -66,6 +65,7 @@
   </script>
 </div>
   
+ <h6> New COVID-19 cases- London </h6>
  <!--Chart 4 -->
 <div class="chart" id="chart4">
   <script>
@@ -74,12 +74,14 @@
   </script>
 </div>
   
+  <h7> People fully vaccinated- second dose </h7>
  <!--Chart 5 -->
 <div class="chart" id="chart5">
   <script>
     var myChart5 = "chart5_seconddose.json";
     vegaEmbed('#chart5', myChart5);
   </script>
+  
 </div>
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
