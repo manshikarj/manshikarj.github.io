@@ -40,7 +40,7 @@
     "y": {
       "field": "newCasesByPublishDate",
       "type": "quantitative",
-      "title": "vaccinated by second dose",
+      "title": "new cases",
       "axis": {"grid": false}
     },
 
