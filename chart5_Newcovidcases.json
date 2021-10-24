@@ -38,7 +38,7 @@
     },
 
     "y": {
-      "field": "newCasesByPublishDate",
+      "field": "changeInNewCasesBySpecimenDate",
       "type": "quantitative",
       "title": "new cases",
       "axis": {"grid": false}
