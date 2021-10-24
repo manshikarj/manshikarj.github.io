@@ -3,7 +3,7 @@
   
   "title": {
     "text": "New COVID cases by region",
-    "subtitle": using API,
+    "subtitle":"using API",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
