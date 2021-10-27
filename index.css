@@ -1,8 +1,5 @@
-
-/* This is my first proper css file */
-
 body{
-    background-color: rgba(61, 53, 53, 0.945);
+    background-color: rgba(46, 43, 43, 0.945);
     max-width: auto;
     margin: 500px;
 }
