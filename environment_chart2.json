@@ -2,7 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "data": {"values":
-          [{"Year": "1998", "Value": "225.5"}, {"Year": "2000", "Value": "221.5"}, {"Year": "2004", "Value":"232.2"}, {"Year": "2010", "Value":"207.1"}]
+          [
+            {"Year": 1998, "Value": 225.5}, {"Year": 2000, "Value": 221.5}, {"Year": 2004, "Value":232.2}, {"Year": 2010, "Value":207.1}
+          ]
           },
   
   "mark": "bar",
