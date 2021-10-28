@@ -11,7 +11,7 @@
   },
   
    "data": {
-    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/region_2021-10-24.csv",
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/covid_cases.csv",
     "format": {"type": "csv"}
   },
    
@@ -19,7 +19,7 @@
         
     {"filter": {
       "field": "areaName", 
-      "oneOf": ["London", "South East", "North East"]}
+      "oneOf": ["England", "Wales", "Northern Ireland"]}
       }
   ],
   
@@ -38,7 +38,7 @@
     },
 
     "y": {
-      "field": "changeInNewCasesBySpecimenDate",
+      "field": "cumCasesBySpecimenDate",
       "type": "quantitative",
       "title": "new cases",
       "axis": {"grid": false}
