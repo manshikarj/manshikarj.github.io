@@ -17,7 +17,7 @@
   "height": 300,
   "width": 345,
   "mark": {
-    "type": "bar",
+    "type": "area",
     "point": false,
     "interpolate": "monotone",
     "color": "blueviolet"
