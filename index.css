@@ -20,13 +20,25 @@ p{color:rgb(255, 255, 255);
 font-family: 'Varela Round', sans-serif;
 }
 
-.chart{
-    width: 300px;
-    border-width: 15px;
-    background-color: white;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: white;
-    margin: auto;
+.bcontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;;
+  gap: 30px 30px;
+  margin-top: 30px;
+  border-style: none;
+  border-color: white;
+  padding: 30px;
+  border-radius: 25px;
 }
 
+.chart{
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  transition: padding 500ms, border-radius 500ms;
+}
