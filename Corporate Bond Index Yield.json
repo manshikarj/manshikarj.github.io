@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "title": {
+    "text": "Emerging Markets High Yield Corporate Bond Index Yield",
+    "subtitle":"importing API",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+   "data": {
+    "url": "https://data.nasdaq.com/api/v3/datasets/ML/EMHYY.csv?api_key=zjyPSUxbkqnoqn4d6myh",
+    "format": {"type": "csv"}
+  },
+
+  
+  
+  "height": 300,
+  "width": 600,
+   
+  "mark": {"type": "line", "point": false},
+ 
+  "encoding": {
+
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"grid": false}
+    },
+
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {"grid": false}
+    }
+}
+}
