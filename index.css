@@ -1,3 +1,7 @@
+.header{
+  text-align: center;
+}
+
 body{
     background-color: rgba(46, 43, 43, 0.945);
     max-width: 70%;
@@ -61,3 +65,15 @@ font-family: 'Varela Round', sans-serif;
 .active {
   background-color: #81787900; 
 }
+
+.bcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    gap: 25px 25px;
+    margin-top: 25px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 25px;
+    border-radius: 35px;
+  }
