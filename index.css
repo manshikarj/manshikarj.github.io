@@ -1,9 +1,7 @@
 body{
     background-color: rgba(46, 43, 43, 0.945);
-    max-width: auto;
-    margin-right: 500px;
-    margin-left: 500px;
-    margin-top: 5px;
+    max-width: 500px;
+    margin: auto;
 }
 
 h1{
