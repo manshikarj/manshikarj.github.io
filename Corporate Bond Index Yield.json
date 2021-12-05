@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "title": {
-    "text": "Emerging Markets High Yield Corporate Bond Index Yield",
+    "text": "OPEC prices",
     "subtitle":"importing API",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
@@ -11,11 +11,9 @@
   },
   
    "data": {
-    "url": "https://data.nasdaq.com/api/v3/datasets/ML/EMHYY.csv?api_key=zjyPSUxbkqnoqn4d6myh",
+    "url": "https://data.nasdaq.com/api/v3/datasets/OPEC/ORB.csv?api_key=zjyPSUxbkqnoqn4d6myh",
     "format": {"type": "csv"}
   },
-
-  
   
   "height": 300,
   "width": 600,
