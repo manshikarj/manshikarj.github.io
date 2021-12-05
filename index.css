@@ -42,7 +42,7 @@ font-family: 'Varela Round', sans-serif;
 }
 
 .icon-bar {
-  width: 100%; 
+  width: 70%; 
   background-color: #E5E0E0; 
   overflow: auto; 
 }
@@ -54,7 +54,7 @@ font-family: 'Varela Round', sans-serif;
   padding: 12px 0; 
   transition: all 0.3s ease; 
   color: black; 
-  font-size: 12px; 
+  font-size: 13px; 
 }
 
 .icon-bar a:hover {
