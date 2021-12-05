@@ -58,11 +58,11 @@ font-family: 'Varela Round', sans-serif;
 .icon-bar a {
   float: left; 
   text-align: center; 
-  width: 100%; 
+  width: 25%; 
   padding: 12px 0; 
   transition: all 0.3s ease; 
   color: black; 
-  font-size: 13px; 
+  font-size: 12px; 
 }
 
 .icon-bar a:hover {
@@ -70,5 +70,5 @@ font-family: 'Varela Round', sans-serif;
 }
 
 .active {
-   background-color: #81787900; 
+  background-color: #81787900; 
 }
