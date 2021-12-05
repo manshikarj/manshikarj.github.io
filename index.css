@@ -19,7 +19,7 @@ h2{
      color:rgb(255, 255, 255);
      font-family: 'Varela Round', sans-serif; 
      text-align: center;
-     font-size: 30px;
+     font-size: 20px;
    
      
 h3{
@@ -32,17 +32,6 @@ p{color:rgb(255, 255, 255);
 font-family: 'Varela Round', sans-serif;
 }
 
-.bcontainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;;
-  gap: 30px 30px;
-  margin-top: 30px;
-  border-style: none;
-  border-color: white;
-  padding: 30px;
-  border-radius: 25px;
-}
 
 .icon-bar {
   width: 100%; 
@@ -75,7 +64,7 @@ font-family: 'Varela Round', sans-serif;
     gap: 25px 25px;
     margin-top: 25px;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: white;
     padding: 25px;
     border-radius: 35px;
   }
