@@ -42,3 +42,27 @@ font-family: 'Varela Round', sans-serif;
   padding: 20px;
   transition: padding 500ms, border-radius 500ms;
 }
+
+.icon-bar {
+  width: 100%; 
+  background-color: #E5E0E0; 
+  overflow: auto; 
+}
+
+.icon-bar a {
+  float: left; 
+  text-align: center; 
+  width: 25%; 
+  padding: 12px 0; 
+  transition: all 0.3s ease; 
+  color: black; 
+  font-size: 12px; 
+}
+
+.icon-bar a:hover {
+  background-color: #bcb5b5; 
+}
+
+.active {
+  background-color: #EFADEB; 
+}
