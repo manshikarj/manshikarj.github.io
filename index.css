@@ -7,15 +7,15 @@ body{
 h1{
     color:rgb(245, 11, 11);
     font-family: 'Varela Round', sans-serif; 
-    text-align: center
+    text-align: left
 }
 
 h2{
      color:rgb(255, 255, 255);
      font-family: 'Varela Round', sans-serif; 
-     text-align: center;
-     font-size: 11;
-     font-weight; 100px;
+     text-align: left;
+     font-size: 9;
+   
      
 h3{
     color:rgb(221, 61, 61);
