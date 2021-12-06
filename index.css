@@ -6,6 +6,7 @@
       background-color: rgba(24, 23, 23, 0.945);
       max-width: 500%;
       margin: 200px;
+      top-margin: 5px
   }
   
   h1{
@@ -31,7 +32,7 @@
   p{color:rgb(255, 255, 255);
   font-family: 'Varela Round', sans-serif;
   text-align: center;
-  font-size: 11px;
+  font-size: 18px;
   }
   
   
