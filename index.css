@@ -1,72 +1,72 @@
 .header{
-  text-align: center;
-}
-
-body{
-    background-color: rgba(46, 43, 43, 0.945);
-    max-width: 70%;
-    margin: auto;
-}
-
-h1{
-    color:rgb(245, 11, 11);
-    font-family: 'Varela Round', sans-serif; 
     text-align: center;
-    font-size: 40px;
-}
-
-h2{
-     color:rgb(255, 255, 255);
-     font-family: 'Varela Round', sans-serif; 
-     text-align: center;
-     font-size: 20px;
-   
+  }
+  
+  body{
+      background-color: rgba(32, 31, 31, 0.945);
+      max-width: 450px;
+      margin: auto;
+  }
+  
+  h1{
+      color:rgb(143, 16, 16);
+      font-family: 'Varela Round', sans-serif; 
+      text-align: center;
+      font-size: 40px;
+  }
+  
+  h2{
+       color:rgb(255, 255, 255);
+       font-family: 'Varela Round', sans-serif; 
+       text-align: center;
+       font-size: 20px;
      
-h3{
-    color:rgb(221, 61, 61);
-    font-family: 'Varela Round', sans-serif;
-    font-size: 14px;
-}
-
-p{color:rgb(255, 255, 255);
-font-family: 'Varela Round', sans-serif;
-text-align: center;
-font-size: 11px;
-}
-
-
-.bcontainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: left;
-    gap: 25px 25px;
-    margin-top: 25px;
-    border-style: solid;
-    border-color: white;
-    padding: 25px;
-    border-radius: 35px;
-  }
-
-  .icon-bar {
-    width: 100%; 
-    background-color: #f3ecec; 
-    overflow: auto; 
+       
+  h3{
+      color:rgb(143, 16, 16);
+      font-family: 'Varela Round', sans-serif;
+      font-size: 14px;
   }
   
-  .icon-bar a {
-    float: left; 
-    text-align: center; 
-    width: 25%; 
-    padding: 12px 0; 
-    transition: all 0.3s ease; 
-    color: black; 
-    font-size: 12px; 
+  p{color:rgb(255, 255, 255);
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  font-size: 11px;
   }
   
-  .icon-bar a:hover {
-    background-color: #bcb5b5; 
-  }
   
-  .active {
-    background-color: #81787900; 
-  }
+  .bcontainer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: left;
+      gap: 25px 25px;
+      margin-top: 25px;
+      border-style: solid;
+      border-color: white;
+      padding: 25px;
+      border-radius: 35px;
+    }
+  
+    .icon-bar {
+      width: 100%; 
+      background-color: #f3ecec; 
+      overflow: auto; 
+    }
+    
+    .icon-bar a {
+      float: left; 
+      text-align: center; 
+      width: 25%; 
+      padding: 12px 0; 
+      transition: all 0.3s ease; 
+      color: black; 
+      font-size: 12px; 
+    }
+    
+    .icon-bar a:hover {
+      background-color: #bcb5b5; 
+    }
+    
+    .active {
+      background-color: #81787900; 
+    }
