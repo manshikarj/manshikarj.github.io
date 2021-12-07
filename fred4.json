@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Carbon per capita by country",
+
+"title": {
+    "text": "Total Labor Productivity ",
+    "subtitle":"For the United Kingdom",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/data_FRED-ULQELP01GBQ659S.json",
+    "format":{"property": "observations"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "color": "darkgreen"},
+  "encoding": {
+    "x": { "field": "date", "type": "temporal", "title": "", "axis": {"grid": false}},
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
+    }
+  }
+}
