@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Carbon per capita by country",
+
+"title": {
+    "text": "Education Index- 2019 ",
+    "subtitle":"Source: Wikipedia",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/education_index.csv",
+    "format":{"property": "observations"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": { "field": "Country", "type": "nominal", "title": "", "axis": {"grid": false}},
+    "y": {
+      "field": "2019",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "color": {"field": "Country", "type": "nominal", "legend": null, 
+        "scale": {"range": ["darkgreen", "teal", "lightblue","violet","purple","pink"]}}
+  }
+}
