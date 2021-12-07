@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Carbon per capita by country",
+
+"title": {
+    "text": "Employment by sector in 2020 - Black minority ",
+    "subtitle":"Source: ONS",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/datadownload.csv",
+    "format":{"property": "observations"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": { "field": "Description", "type": "nominal", "title": "", "axis": {"grid": false}},
+    "y": {
+      "field": "Black",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "color": {"field": "Country", "type": "nominal", "legend": null, 
+        "scale": {"range": ["darkred"]}}
+  }
+}
