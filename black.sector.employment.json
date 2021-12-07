@@ -23,7 +23,7 @@
     "y": {
       "field": "Black",
       "type": "quantitative",
-      "title": "",
+      "title": "Percentage (%) of workers",
       "axis": {"grid": false}
     },
     "color": {"field": "Country", "type": "nominal", "legend": null, 
