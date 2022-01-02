@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "title": {
+    "text": "Female employment by industry",
+    "subtitle": [
+      "Breakdown of female employment industry in 2020.",
+      "Source: ONS"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start"
+  },
+  "data": {
+  "data": {"url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/interactivity.csv",
+  "format": {"type":"csv"}},
+    "values": [
+      {"category": "public sector", "value": 4930},
+      {"category": "private sector", "value": 10382},
+      {"category": "Agriculture, forestry & fishing", "value": 84},
+      {"category": "Mining, energy and water supply", "value": 131},
+      {"category": "Manufacturing", "value": 7723},
+      {"category": "Construction", "value": 279}, {"category": "Wholesale, retail & repair of motor vehicles", "value": 1769},{"category": "Transport & storage", "value": 311},{"category": "Accommod-ation & food services", "value": 828},{"category": "Information & communication", "value": 481},{"category": "Financial & insurance activities", "value": 627}, {"category": "Real estate activities", "value": 219}, {"category": "Professional, scientific & technical activities", "value": 1152},{"category": "Administrative & support services", "value": 647},{"category": "Public admin & defence and social security", "value": 1266},{"category": "Education", "value": 2516},{"category": "Human health & social work activities", "value": 3340},{"category": "Other services", "value": 950}
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal", "scale": {"scheme":"tableau20"}}
+  }
+}
