@@ -1,26 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-
-    "description0": "Example using ONS API",
-    "description1": "Transform using the timeParse command",
-    "description2": "Two sliders sets two parameters for the min and max year",
-    "description3": "These parameters are then used to fiter the data",
-    "description4": "The filtered value determines the domain of the y axis",
-
+    "description0": "Fertility rate wordwide",
+   
     "title": {
-    "text": "The size of the UK economy - interactive",
-    "subtitle": "Nominal GDP, quarterly. Source: ONS (YBHA)",
+    "text": "Fertility rates trend wordwide",
+    "subtitle": "Source:Word Bank",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
     "color": "black"
   },
-
-
     "width":300,
     "height":300,
-
 
     "data": {
       "name":"myData",
@@ -29,7 +20,6 @@
         "type":"csv"
       }},
 
-
     "mark":{
       "type": "line",
       "color":"blue",
@@ -37,11 +27,9 @@
       "opacity":1
     },
 
-
     "transform": [
       {"calculate":"datum.births", "as":"value"},
       {"calculate":"datum.year", "as": "year"},{"filter": "datum.year>=minYear"},{"filter": "datum.year<=maxYear"}],
-     
 
     "params": [    
       {"name":"minYear", "value":1960,
@@ -68,13 +56,13 @@
       "x": {
         "field": "year",
         "type": "temporal",
-        "title":"year"
+        "title":"Year"
         },
   
       "y": {
         "field": "births",                
         "type": "quantitative",
-        "title":"fertility rate",
+        "title":"Fertility Rate",
         "scale":{
           "domain":{
             "data": "myData", 
@@ -88,4 +76,3 @@
     
   }
 }
-
