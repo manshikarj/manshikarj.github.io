@@ -11,26 +11,26 @@
   
   h1{
       color:rgb(143, 16, 16);
-      font-family: 'Varela Round', sans-serif; 
+      font-family: 'Noto Serif', serif; 
       text-align: center;
       font-size: 40px;
   }
   
   h2{
        color:rgb(255, 255, 255);
-       font-family: 'Varela Round', sans-serif; 
+       font-family: 'Noto Serif', serif; 
        text-align: center;
        font-size: 26px;
   } 
        
   h3{
       color: rgb(143, 16, 16);
-      font-family: 'Varela Round', sans-serif;
+      font-family: 'Noto Serif', serif;
       font-size: 20px;
   }
   
   p{color:rgb(255, 255, 255);
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Noto Serif', serif;
   text-align: center;
   font-size: 18px;
   }
@@ -61,7 +61,8 @@
       padding: 12px 0; 
       transition: all 0.3s ease; 
       color: black; 
-      font-size: 12px; 
+      font-size: 12px;
+      font-family: 'Noto Serif', serif
     }
     
     .icon-bar a:hover {
