@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Literacy rates on population size",
+
+
+   "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/literacy.csv",
+    "format": {"type": "csv"}
+  },
+
+ "title": {
+    "text": "Literacy rate by country and population size",
+    "subtitle": [
+      "Source: World population review "],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start"
+  },
+  
+ "height": 310,
+ "width": 305,
+
+"mark": {"type": "circle", "size": 60},
+
+"selection": {
+      "Country": {
+        "type": "single",
+        "fields": ["country"],
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Switzerland",
+            "India",
+            "Germany",
+            "Niger",
+            "Afghanistan",
+            "Guinea",
+            "Yemen",
+            "China"
+          ],
+          "name": "Country"
+        }
+      }
+    },
+
+     "transform": [
+      
+      {"filter": {"selection": "Country"}}
+    ],
+  "encoding": {
+    "x": {
+      "field": "pop2021",
+      "type": "quantitative",
+      "title": "Population in 2021"
+    
+      },
+
+    "y": {
+      "field": "latestRate",
+      "type": "quantitative",
+      "title": "Literacy rates",
+      "scale":{"domain":[10, 100]}
+    },
+    "color": {"field": "country", "type": "nominal", "title": "Country:", "scale": {"scheme":"accent"}},
+
+
+   "tooltip": [
+      {"field": "country", "type": "nominal", "title": "country"}
+      ]
+}
+}
