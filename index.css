@@ -72,3 +72,14 @@
     .active {
       background-color: #81787900; 
     }
+
+.chart{
+    width: 470px;
+    border-width: 10px;
+    border-hight: 10px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    margin: 30px;
+}
