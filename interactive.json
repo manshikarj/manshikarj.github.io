@@ -14,7 +14,7 @@
     "format": {"type": "csv"}
   },
   "height": 300,
-  "width": 120,
+  "width": 105,
   "mark": {"type": "bar", "size": 5.5},
   "type": "text",
   "selection": {
