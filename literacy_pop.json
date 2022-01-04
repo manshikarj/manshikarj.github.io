@@ -1,73 +1,189 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "Literacy rates on population size",
-
-
-   "data": {
-    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/literacy.csv",
-    "format": {"type": "csv"}
-  },
-
- "title": {
+  "background": "white",
+  "padding": 5,
+  "width": 305,
+  "height": 310,
+  "title": {
     "text": "Literacy rate by country and population size",
-    "subtitle": [
-      "Source: World population review "],
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
+    "subtitle": ["Source: World population review "],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start"
   },
-  
- "height": 310,
- "width": 305,
-
-"mark": {"type": "circle", "size": 60},
-
-"selection": {
-      "Country": {
-        "type": "single",
-        "fields": ["country"],
-        "bind": {
-          "input": "select",
-          "options": [
-            null,
-            "Switzerland",
-            "India",
-            "Germany",
-            "Niger",
-            "Afghanistan",
-            "Guinea",
-            "Yemen",
-            "China"
-          ],
-          "name": "Country"
+  "style": "cell",
+  "data": [
+    {"name": "Country_store"},
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/literacy.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!length(data(\"Country_store\")) || vlSelectionTest(\"Country_store\", datum)"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"pop2021\"]) && isFinite(+datum[\"pop2021\"]) && isValid(datum[\"latestRate\"]) && isFinite(+datum[\"latestRate\"])"
         }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "unit",
+      "value": {},
+      "on": [
+        {"events": "mousemove", "update": "isTuple(group()) ? group() : unit"}
+      ]
+    },
+    {
+      "name": "Country_country",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Switzerland",
+          "India",
+          "Germany",
+          "Niger",
+          "Afghanistan",
+          "Guinea",
+          "Yemen",
+          "China"
+        ],
+        "name": "Country"
       }
     },
-
-     "transform": [
-      
-      {"filter": {"selection": "Country"}}
-    ],
-  "encoding": {
-    "x": {
-      "field": "pop2021",
-      "type": "quantitative",
-      "title": "Population in 2021"
-    
-      },
-
-    "y": {
-      "field": "latestRate",
-      "type": "quantitative",
-      "title": "Literacy rates",
-      "scale":{"domain":[10, 100]}
+    {
+      "name": "Country",
+      "update": "vlSelectionResolve(\"Country_store\", \"union\", true, true)"
     },
-    "color": {"field": "country", "type": "nominal", "title": "Country:", "scale": {"scheme":"accent"}},
-
-
-   "tooltip": [
-      {"field": "country", "type": "nominal", "title": "country"},
-{"field": "latestRate", "type": "quantitative", "title": "literacy"}
+    {
+      "name": "Country_tuple",
+      "update": "Country_country !== null ? {fields: Country_tuple_fields, values: [Country_country]} : null"
+    },
+    {
+      "name": "Country_tuple_fields",
+      "value": [{"type": "E", "field": "country"}]
+    },
+    {
+      "name": "Country_modify",
+      "on": [
+        {
+          "events": {"signal": "Country_tuple"},
+          "update": "modify(\"Country_store\", Country_tuple, true)"
+        }
       ]
-}
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "symbol",
+      "style": ["circle"],
+      "interactive": true,
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "opacity": {"value": 0.7},
+          "size": {"value": 60},
+          "fill": {"scale": "color", "field": "country"},
+          "tooltip": {
+            "signal": "{\"country\": isValid(datum[\"country\"]) ? datum[\"country\"] : \"\"+datum[\"country\"], \"literacy\": format(datum[\"latestRate\"], \"\")}"
+          },
+          "ariaRoleDescription": {"value": "circle"},
+          "description": {
+            "signal": "\"Population in 2021: \" + (format(datum[\"pop2021\"], \"\")) + \"; Literacy rates: \" + (format(datum[\"latestRate\"], \"\")) + \"; Country:: \" + (isValid(datum[\"country\"]) ? datum[\"country\"] : \"\"+datum[\"country\"]) + \"; country: \" + (isValid(datum[\"country\"]) ? datum[\"country\"] : \"\"+datum[\"country\"]) + \"; literacy: \" + (format(datum[\"latestRate\"], \"\"))"
+          },
+          "x": {"scale": "x", "field": "pop2021"},
+          "y": {"scale": "y", "field": "latestRate"},
+          "shape": {"value": "circle"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "domain": {"data": "source_0", "field": "pop2021"},
+      "range": [0, {"signal": "width"}],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [10, 100],
+      "range": [{"signal": "height"}, 0],
+      "zero": false
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "source_0", "field": "country", "sort": true},
+      "range": {"scheme": "accent"}
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "gridScale": "y",
+      "grid": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "gridScale": "x",
+      "grid": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "domain": false,
+      "labels": false,
+      "aria": false,
+      "maxExtent": 0,
+      "minExtent": 0,
+      "ticks": false,
+      "zindex": 0
+    },
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "title": "Population in 2021",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "title": "Literacy rates",
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "legends": [
+    {
+      "title": "Country:",
+      "fill": "color",
+      "symbolType": "circle",
+      "encode": {"symbols": {"update": {"opacity": {"value": 0.7}}}}
+    }
+  ]
 }
