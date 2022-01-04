@@ -35,7 +35,7 @@
           {"mark":{
             "type": "line",
             "align": false,
-            "interpolate": "basis",
+            "interpolate": "step",
             "color": "gold"}},
           {"transform": 
             [{"filter": {"selection": "hover"}}], 
