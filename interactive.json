@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Figure 1: Social Mobility Index Around the World",
+  "title": {
+    "text": "Female employment by industry",
+    "subtitleFontSize": 11,
+    "fontSize": 14,
+    "subtitle": "Source: ONS",
+    "subtitleFontStyle": "italic"
+  },
+  "background": "white",
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/female_employment.csv",
+    "format": {"type": "csv"}
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "bar", "size": 5.5},
+  "type": "text",
+  "selection": {
+  "industry": {
+      "type": "single",
+      "fields": ["industry"]
+    }
+  },
+  "transform": [{"filter": {"selection": "industry"}}],
+  "encoding": {
+    "y": {
+      "field": "industry",
+      "type": "nominal",
+      "title": "",
+      "axis": {"labelAngle": 0, "labelFontSize": 9.4}
+    },
+    "color": {
+      "field": "industry",
+      "type": "nominal",
+      "title": "Industry:",
+      "scale": {"scheme": "tableau20"}
+    },
+    "tooltip": [
+      {"field": "industry", "type": "nominal", "title": "industry"},
+      {"field": "value", "type": "nominal", "title": "number of women"}
+    ],
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Number of women",
+      "axis": {"labelAngle": 0, "grid": true, "gridColor": "#ffffff"}
+    }
+  }
+}
