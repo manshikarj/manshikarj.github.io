@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Nepal- unemployment rates",
+
+   "title": {
+    "text": "Nepal- unemployment rates",
+    "subtitle":" Source: Statista",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/nepal_female_unemployment.csv"},
+  "height": 300,
+  "width": 300,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "step",
+    "color": "red" 
+  },
+
+  "encoding": {"x": {"field": "year", "type": "temporal", "title":"year"}},
+ 
+  "layer": [
+    {"encoding": {
+        "y": {"field": "value", 
+              "type": "quantitative", 
+              "title":"unemployment rate"}},
+        
+        "layer": [
+          {"mark":{
+            "type": "line",
+            "align": false,
+            "interpolate": "basis",
+            "color": "gold"}},
+          {"transform": 
+            [{"filter": {"selection": "hover"}}], 
+               "mark": {
+                 "type":"circle",
+                 "size":150,
+                 "color":"gold"}}
+      ]
+    },
+    
+    {"mark": "rule", 
+      "encoding": {
+         "opacity": {
+           "condition": {"value": 0, "selection": "hover"},
+           "value": 0
+             },
+          "tooltip": [
+          {"field": "year", "type": "temporal", "format": "%b-%Y", "title":"Year"},  
+          {"field": "value", "type": "quantitative", "format": ",.0f", "title":"Unemployment Rate(%)"}
+            ]
+           },
+      "selection": {
+        "hover": {
+          "type": "single",
+          "fields": ["year"],
+          "nearest": true,
+          "on": "mouseover",
+          "empty": "none",
+          "clear": "mouseout"
+        }
+      }
+    }
+  ]
