@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "description": "Chart that uses repeated layers to make multiple calls to an API",
+
+
+    "title": {
+      "text": "Female enrolment rate by school grade",
+      "subtitle":"Source: World Bank",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+
+    "height":300,
+    "width":300,
+
+    
+    "encoding": {
+      "x": {"field": "year", "type": "temporal", "title": "Years", "axis": {"grid": false}},
+      "y": {"field": "level", "type": "quantitative", "title": "Enrolment level", "axis": {"grid": false}},
+      "color":{"field":"grade", "title":"School grade", "legend":{"orient": "right"}}
+    },
+
+
+
+    "layer": [
+      
+
+      {"data": {"url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/tertiary.csv"},
+      "mark": {"type":"line", "color": "green"}
+      },
+
+      {"data": {"url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/secondary.csv"},
+      "mark": {"type":"line", "color":"blue"}
+      },
+
+      {"data": {"url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/primary.csv"},
+      "mark": {"type":"line", "color":"red"}
+      }
+    ]
+}
