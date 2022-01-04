@@ -23,7 +23,7 @@
     "x": {"field": "Year", "type": "temporal", "title": null, "axis": {"grid": false}},
     "y": {
       "field": "Value",
-      "title": "Sector",
+      "title": "",
       "type": "quantitative",
       "xxscale": {"domain": [0,900]},
       "axis": {"grid": false}
