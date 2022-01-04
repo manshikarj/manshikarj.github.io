@@ -13,12 +13,12 @@
     "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/female_employment.csv",
     "format": {"type": "csv"}
   },
-  "height": 300,
-  "width": 105,
+  "height": 200,
+  "width": 130,
   "mark": {"type": "bar", "size": 5.5},
   "type": "text",
   "selection": {
-  "industry": {
+    "industry": {
       "type": "single",
       "fields": ["industry"],
       "bind": {
@@ -39,6 +39,29 @@
   "transform": [{"filter": {"selection": "industry"}}],
   "encoding": {
     "y": {
+      "field": "industry",
+      "type": "nominal",
+      "title": "",
+      "axis": {"labelAngle": 0, "labelFontSize": 9.4}
+    },
+    "color": {
+      "field": "industry",
+      "type": "nominal",
+      "title": "Industry:",
+      "scale": {"scheme": "tableau20"}
+    },
+    "tooltip": [
+      {"field": "industry", "type": "nominal", "title": "industry"},
+      {"field": "value", "type": "nominal", "title": "number of women"}
+    ],
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Number of women",
+      "axis": {"labelAngle": 0, "grid": true, "gridColor": "#ffffff"}
+    }
+  }
+}
       "field": "industry",
       "type": "nominal",
       "title": "",
