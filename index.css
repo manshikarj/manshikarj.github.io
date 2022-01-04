@@ -86,7 +86,8 @@
 }
 
 .chart-wrapper{
-    width: 470px;
+    width: 100%;
+    heigh: 0%
     border-width: 10px;
     border-height: 10px;
     background-color: white;
