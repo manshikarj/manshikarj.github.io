@@ -20,7 +20,20 @@
   "selection": {
   "industry": {
       "type": "single",
-      "fields": ["industry"]
+      "fields": ["industry"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Private sector",
+          "Public sector",
+          "Public admin & defence; social security",
+          "Wholesale & retail & repair of motor vehicles",
+          "Education",
+          "Human health & social work activities"
+        ],
+        "name": "Industry"
+      }
     }
   },
   "transform": [{"filter": {"selection": "industry"}}],
