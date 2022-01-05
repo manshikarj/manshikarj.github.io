@@ -75,7 +75,7 @@
     }
 
 .chart{
-    width: 500px;
+    width: 470px;
     border-width: 10px;
     border-height: 10px;
     background-color: white;
@@ -100,7 +100,7 @@
     
 .w3-rounded {
   border-radius: 8px;
-  width: 500px;
+  width: 550px;
   border-width: 10px;
   background-color: white;
   border-style: solid;
