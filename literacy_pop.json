@@ -10,6 +10,7 @@
     "subtitle": ["Source: World population review "],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
+    "fontSize": 14,
     "anchor": "start"
   },
   "style": "cell",
