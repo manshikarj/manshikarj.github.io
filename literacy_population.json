@@ -52,7 +52,8 @@
     "x": {
       "field": "pop2021",
       "type": "quantitative",
-      "title": "Population in 2021"
+      "title": "Population in 2021",
+      "scale":{"domain":[100,340000]}
         
       },
 
