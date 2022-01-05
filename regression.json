@@ -12,6 +12,7 @@
     "subtitle": "Source: World bank (2000-2019)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
+    "fontSize": 14,
     "anchor": "start"
   },
   "height": 300,
