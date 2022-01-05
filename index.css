@@ -45,7 +45,14 @@
       border-left: none;
       border-right: none;
     }
-  
+ 
+    
+    .chart:hover {
+      transform: scale(1.04, 1.04);
+      transition: 0.6s;
+      
+    }  
+
     .icon-bar {
       width: 100%; 
       background-color: #f3ecec; 
