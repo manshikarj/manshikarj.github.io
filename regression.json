@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Regressing female literacy rate on thier unemplyment leve",
+  "data": {
+    "url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/regression_graph.csv",
+    "format": {"type": "csv"}
+  },
+  "background": "#ffffff",
+  "config": {"axis": {"grid": true, "gridColor": "#fffefe"}},
+  "title": {
+    "text": "Regressing female literacy rate on thier unemplyment level- wordwide",
+    "subtitle": "Source: World bank (2000-2019)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "height": 300,
+  "width": 370,
+  "layer": [
+    {
+      "mark": {"type": "point", "size": 30, "color": "#0baf19"},
+      "encoding": {
+        "x": {
+          "field": "literacy",
+          "type": "quantitative",
+          "title": "Literacy rate %",
+          "scale": {"domain":[74,84]}
+        },
+        "y": {
+          "field": "unemployment",
+          "type": "quantitative",
+          "title": "Unemployment rate %",
+          "scale": {"domain":[5.4,6.6]}
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "year"},
+          {"field": "literacy", "type": "quantitative", "title": "literacy"},
+          {"field": "unemployment", "type": "quantitative", "title": "unemployment"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#1c973a", "size": 3},
+      "transform": [{"regression": "unemployment", "on": "literacy"}],
+      "encoding": {
+        "x": {"field": "literacy", "type": "quantitative"},
+        "y": {"field": "unemployment", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"regression": "unemployment", "on": "literacy", "params": true},
+        {"calculate": "'R²= '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "green",
+        "size": 14,
+        "x": "width",
+        "align": "center",
+        "y": -5
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}
