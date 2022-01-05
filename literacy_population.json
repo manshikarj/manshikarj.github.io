@@ -52,7 +52,8 @@
     "x": {
       "field": "pop2021",
       "type": "quantitative",
-      "title": "Population in 2021"
+      "title": "Population in 2021",
+      "scale":{"domain":[100,200000]}
     
       },
 
@@ -67,7 +68,8 @@
 
    "tooltip": [
       {"field": "country", "type": "nominal", "title": "country"},
-      {"field": "latestRate", "type": "quantitative", "title": "literacy"}
+      {"field": "latestRate", "type": "quantitative", "title": "literacy"},
+      {"field": "pop2021", "type": "quantitative", "title": "population"}
       ]
 }
 }
