@@ -22,7 +22,7 @@
     
     "encoding": {
       "x": {"field": "year", "type": "temporal", "title": "Years", "axis": {"grid": false}},
-      "y": {"field": "level", "type": "quantitative", "title": "Enrolment level", "axis": {"grid": false}},
+      "y": {"field": "level", "type": "quantitative", "title": "Enrolment level (%)", "axis": {"grid": false}},
       "color":{"field":"grade", "title":"School grade", "legend":{"orient": "right"}}
     },
 
