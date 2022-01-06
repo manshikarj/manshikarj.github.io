@@ -8,7 +8,7 @@
   "background": "#ffffff",
   "config": {"axis": {"grid": true, "gridColor": "#fffefe"}},
   "title": {
-    "text": "Regressing female literacy rate on thier unemplyment level- wordwide",
+    "text": "Regressing female literacy rate on their unemplyment level- wordwide",
     "subtitle": "Source: World bank (2000-2019)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
