@@ -3,10 +3,11 @@
     "description0": "Fertility rate wordwide",
    
     "title": {
-    "text": "Fertility rates trend wordwide",
+    "text": "Figure 2: Fertility rates trend wordwide",
     "subtitle": "Source: Word Bank",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
+    "TitleFontSize":14,
     "anchor": "start",
     "color": "black"
   },
