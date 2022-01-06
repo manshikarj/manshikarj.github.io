@@ -63,7 +63,7 @@
       "y": {
         "field": "births",                
         "type": "quantitative",
-        "title":"Fertility Rate",
+        "title":"Fertility Rate- number of children of one women",
         "scale":{
           "domain":{
             "data": "myData", 
