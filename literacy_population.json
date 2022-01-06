@@ -31,13 +31,13 @@
           "options": [
             null,
             "Switzerland",
-            "India",
+            "Sweden",
             "Germany",
             "Niger",
             "Afghanistan",
-            "Guinea",
+            "Japan",
             "Yemen",
-            "China"
+            "Bangladesh"
           ],
           "name": "Country"
         }
@@ -54,7 +54,7 @@
       "type": "quantitative",
       "title": "Population in 2021",
       "scale":{"domain":[100,340000]}
-        
+    
       },
 
     "y": {
