@@ -5,15 +5,14 @@
   body{
       background-color: rgba(24, 23, 23, 0.945);
       max-width: 100%;
-      margin-left: 10px; 
-    margin-right: 10px;
+      margin: "auto";
   }
 
  h1{
       color:rgb(143, 16, 16);
       font-family: 'Noto Serif', serif; 
       text-align: center;
-      font-size: 45px;
+      font-size: 50px;
   }
   
   h2{
@@ -24,7 +23,7 @@
   } 
        
   h3{
-      color: rgb(143, 16, 16);
+      color: rgb(255, 255, 255);
       font-family: 'Noto Serif', serif;
       font-size: 20px;
   }
