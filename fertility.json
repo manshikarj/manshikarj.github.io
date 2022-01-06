@@ -22,7 +22,7 @@
 
     "mark":{
       "type": "line",
-      "color":"blue",
+      "color":"purple",
       "strokeWidth":2,
       "opacity":1
     },
