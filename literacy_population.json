@@ -61,7 +61,7 @@
     "y": {
       "field": "latestRate",
       "type": "quantitative",
-      "title": "Literacy rates",
+      "title": "Literacy rates (%)",
       "scale":{"domain":[10, 100]}
     },
     "color": {"field": "country", "type": "nominal", "title": "Country:", "scale": {"scheme":"accent"}},
