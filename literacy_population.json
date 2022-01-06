@@ -9,11 +9,12 @@
   },
 
  "title": {
-    "text": "Literacy rate by country and population size",
+    "text": "Figure 3: Literacy rate by country and population size",
     "subtitle": [
       "Source: World population review "],
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
+   "TitleFontSize":14,
     "anchor": "start"
   },
   
