@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Figure 1: Social Mobility Index Around the World",
   "title": {
-    "text": "Female employment by industry",
+    "text": "FIGURE 5: Female employment by industry",
     "subtitleFontSize": 11,
     "fontSize": 14,
     "subtitle": "Source: ONS",
