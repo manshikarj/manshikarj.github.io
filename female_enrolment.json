@@ -40,6 +40,20 @@
 
       {"data": {"url": "https://raw.githubusercontent.com/manshikarj/manshikarj.github.io/main/primary.csv"},
       "mark": {"type":"line", "color":"red"}
-      }
+      },
+
+      {"mark": {
+          "type": "circle",
+          "color":"#00b5f1",
+       
+          "size":100}},
+
+        {"mark": {
+          "type": "text", 
+          "align": "left", 
+          "dx": 8,
+          "color":"#00BFFF"
+       }}
+      
     ]
 }
