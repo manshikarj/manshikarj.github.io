@@ -87,7 +87,7 @@
    </script>    
    </div>
     
- <p> Figure 3 data was scraped from the World Population Review website then manually charted on Vega-Lite by inserting a dropdown feature to allow for greater details. China and India were outliers of the used dataset given their extremely high population sizes distorting the x-axix. For such reason I chose to not include them by limiting the population range to 340,000 inhabitants, considered a better reflection of the average population size. </p>
+ <p> Figure 3 data was scraped from the World Population Review website then manually charted on Vega-Lite by inserting a dropdown feature to allow for greater details. China and India were outliers of the used dataset given their extremely high population sizes distorting the x-axix. For such reason I dropped them and limited the population range to 340,000 inhabitants, considered a better reflection of the average population size. </p>
     
  <p> Now that we have a better understanding of what influences literacy, we can directly regress female literacy rates on their unemployment levels. Figure 4 was built on python using matplot. The data was manually collected from World Bank for both variables across the same time period then imported into Python to create the regression []. The regression reveals a low to medium R^2 of 0.36, suggesting 36% of the variations in literacy rates to be explainable by the unemployment level observed, leading us to infer that higher literacy can indeed lower female unemployment levels. We cannot conclude causation from such regression given the number of external factors that would have to be included, however there is enough evidence to infer a negative correlation between the two variables.</p> 
     
