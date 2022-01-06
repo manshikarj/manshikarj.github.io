@@ -1,0 +1,127 @@
+  .header{
+    text-align: center!important;
+  }
+  
+  body{
+      background-color: rgba(24, 23, 23, 0.945);
+      max-width: 100%;
+      margin: auto;   
+  }
+
+ h1{
+      color:rgb(143, 16, 16);
+      font-family: ''Bungee', cursive;
+      text-align: center!important;
+      font-size: 45px;
+  }
+  
+  h2{
+       color:rgb(255, 255, 255);
+       font-family: 'Noto Serif', serif; 
+       text-align: center;
+       font-size: 26px;
+  } 
+       
+  h3{
+      color: rgb(143, 16, 16);
+      font-family: 'Noto Serif', serif;
+      font-size: 20px;
+  }
+  
+  p{color:rgb(255, 255, 255);
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  font-size: 18px;
+  }
+  
+  
+  .hcontainer {
+      display: flow-root;
+      position: relative;
+      text-align: center;
+      border: 3px solid rgb(255, 255, 255);
+      border-top:none;
+      border-left: none;
+      border-right: none;
+    }
+ 
+    
+    .chart:hover {
+      transform: scale(1.04, 1.04);
+      transition: 0.6s;
+      
+    }  
+
+    .icon-bar {
+      width: 100%; 
+      background-color: #f3ecec; 
+      overflow: auto; 
+    }
+    
+    .icon-bar a {
+      float: left; 
+      text-align: center; 
+      width: 25%; 
+      padding: 12px 0; 
+      transition: all 0.3s ease; 
+      color: black; 
+      font-size: 12px;
+      font-family: 'Noto Serif', serif
+    }
+    
+    .icon-bar a:hover {
+      background-color: #bcb5b5; 
+    }
+    
+    .active {
+      background-color: #81787900; 
+    }
+
+.chart{
+    width: auto;
+    border-width: static;
+    background-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: white;
+    margin: 30px;
+    text-align: center !important;
+    padding: 10px;
+}
+
+.chart-wrapper{
+    width: 100%;
+    heigh: 0%
+    border-width: 10px;
+    border-height: 10px;
+    background-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+    
+}    
+ 
+    
+.w3-rounded {
+  border-radius: 8px;
+  width: 550px;
+  border-width: 10px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  margin: 30px;
+}
+
+.bcontainer {
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	position: relative;
+  	left: 120px;
+  	width: 80%;
+  	text-align: justify;
+	border: 3px hidden;
+	padding: 30px;
+}
