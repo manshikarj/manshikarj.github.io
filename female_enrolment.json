@@ -6,10 +6,11 @@
 
 
     "title": {
-      "text": "Figure 1: Female enrolment rate by school grade",
+      "text": "FIGURE 1: Female enrolment rate by school grade",
       "subtitle":"Source: World Bank",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
+      "fontSize": 14,
       "anchor": "start",
       "color": "black"
     },
