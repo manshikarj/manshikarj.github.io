@@ -1,5 +1,5 @@
   .header{
-    text-align: center;
+    text-align: center!important;
   }
   
   body{
@@ -11,8 +11,8 @@
  h1{
       color:rgb(143, 16, 16);
       font-family: ''Bungee', cursive;
-      text-align: center;
-      font-size: 50px;
+      text-align: center!important;
+      font-size: 45px;
   }
   
   h2{
