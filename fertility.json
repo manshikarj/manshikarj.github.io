@@ -7,7 +7,7 @@
     "subtitle": "Source: Word Bank",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
-    "TitleFontSize":14,
+    "fontSize": 14,
     "anchor": "start",
     "color": "black"
   },
