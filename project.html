@@ -31,8 +31,25 @@
   <a href="https://rapidcharts.io/datascience" target="_blank"><i class="fa fa-book"> COURSE PAGE</i></a>
 </div> 
 
+ <container class="hcontainer"> 
     
-     <!--Chart 24--> 
+<h3><strong> DO FEMALE LITERACY RATES HAVE AN IMPACT ON THEIR UNEMPLOYMENT LEVEL? </strong></h3>
+</container>       
+<br>
+<br>
+    
+<container class="hcontainer">     
+ <h2><strong> INTRODUCTION: </strong></h2>
+ <p> It is known that unemployment rates for women are usually higher than those of men due to gender discrimination practice, sector specific requirement, literacy gaps particularly in less developed countries etc. In this project we will analyse the extent and effect of female literacy in greater details. </p>
+ </container>       
+ <br>
+ <br>  
+    
+<container class="hcontainer">       
+ <h2><strong> ANALYSIS: </strong></h2>   
+ <p> Starting by analysing what literacy is made of, we decided to investigate female enrolment rates by school grade and use such results as a direct measure of their literacy levels. Figure 1 was created by layering different school grades into one graph. I could not install the World Bank data on Python due to a version incompatibility, so I manually pulled out data from the three different sources, separately uploaded them on GitHub and used the layer function to chart it.</p>
+     
+ <!--Chart 24--> 
   <div class="chart" id="chart24">
   <script>
     var myChart24 = "female_enrolment.json";
@@ -40,6 +57,10 @@
    </script>    
    </div>
     
+ <p> Figure 1 suggests a significant lower percentage of enrolment rates for higher education (tertiary: 42%) than for lower school grades (primary: 99.9% and secondary: 59%), highlighting the lack of female enrolment in higher education as a significant factor lowering their literacy rate. </p>
+
+<p> Nevertheless, we must consider that the same figure also shows us a positively increasing trens across all education levels’ enrolment rates over the selected years, hinting towards greater female literacy rates in the future. Figure 2 support such conclusion revealing a downward trend of fertility rates perhaps as a result of an increasing number of females progressing into higher education levels which appears to be associated with lower fertility levels due to women’s ability to make more conscious life choices {} </p>
+   
      <!--Chart 23--> 
   <div class="chart" id="chart23">
   <script>
@@ -47,7 +68,22 @@
     vegaEmbed('#chart23', myChart23);
    </script>    
    </div> 
+ <p> Figure 2 was built manually collecting data of female fertility rates (1960-2019) from the World Bank dataset in order to create one Vega Lite an interactive slider chart offering greater detail and interaction when looking at shorter time frames than the default.</p>
+
+<p> So far, we have seen that school progression can be considered a key factor influencing literacy rates, but why is it that some country tend to have better female school progression and literacy rates than others? Figure 3 tries to answer such question by looking at country defining characteristics such as their population size to infer whether there exists a correlation against literacy levels. From the scatterplot below we can be conclude that the bigger the population of a country is the higher their literacy rates seem to be. Such correlation is however quite weak with many smaller countries such as Switzerland having close to 100% literacy rates and larger ones i.e., Germany having lower literacy of 83% despite the similarity of their economies. </p>  
+  
+     <!--Chart 21--> 
+  <div class="chart" id="chart21">
+  <script>
+    var myChart21 = "literacy_population.json";
+    vegaEmbed('#chart21', myChart21);
+
+   </script>    
+   </div>
     
+ <p> Figure 3 data was scraped from the World Population Review website then manually charted on Vega-Lite by inserting a dropdown feature to allow for greater details. China and India were outliers of the used dataset given their extremely high population sizes distorting the x-axix. For such reason I chose to not include them by limiting the population range to 340,000 inhabitants, considered a better reflection of the average population size. </p>
+    
+ <p> Now that we have a better understanding of what influences literacy, we can directly regress female literacy rates on their unemployment levels. Figure 4 was built on python using matplot. The data was manually collected from World Bank for both variables across the same time period then imported into Python to create the regression []. The regression reveals a low to medium R^2 of 0.36, suggesting 36% of the variations in literacy rates to be explainable by the unemployment level observed, leading us to infer that higher literacy can indeed lower female unemployment levels. We cannot conclude causation from such regression given the number of external factors that would have to be included, however there is enough evidence to infer a negative correlation between the two variables.</p> 
     
      <!--regression -->
   <!--Chart 22--> 
@@ -59,15 +95,8 @@
    </script>    
    </div> 
     
-    <!--Chart 21--> 
-  <div class="chart" id="chart21">
-  <script>
-    var myChart21 = "literacy_population.json";
-    vegaEmbed('#chart21', myChart21);
-
-   </script>    
-   </div>
-    
+    <p> We conclude by considering female employment by industry to further help us understand the type and level of education required to ensure women’s employment. Figure 5 consists in manually selecting only the women and 2020 data points over hundreds of other categories. Such data was then tailored within the dropdown to highlight the employment number of industries that have a lower female proportion. Results show women to be most employed in manual and administrative industry types, therefore requiring specific skills set attainable by progressing through their higher education stages.</p>
+     
   <!--Chart 20--> 
   <div class="chart" id="chart20">
   <script>
@@ -77,7 +106,9 @@
    </script>    
    </div>
     
-        
+ </container>       
+ <br>
+ <br>       
 
 
 </header>
