@@ -1,13 +1,19 @@
-
+  .header{
+    text-align: center;
+  }
   
   body{
       background-color: rgba(24, 23, 23, 0.945);
       max-width: 100%;
-      margin: auto;
-      
+      margin: auto;   
   }
-  
 
+ h1{
+      color:rgb(143, 16, 16);
+      font-family: ''Bungee', cursive;
+      text-align: center;
+      font-size: 50px;
+  }
   
   h2{
        color:rgb(255, 255, 255);
