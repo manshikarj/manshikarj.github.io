@@ -5,7 +5,8 @@
   body{
       background-color: rgba(24, 23, 23, 0.945);
       max-width: 100%;
-      margin: auto;   
+      margin-left: 10px; 
+    margin-right: 10px;
   }
 
  h1{
