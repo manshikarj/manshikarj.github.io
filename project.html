@@ -85,7 +85,7 @@
 
 <p> So far, we have seen that school progression can be considered a key factor influencing literacy rates, but why is it that some country tend to have better female school progression and literacy rates than others? Figure 3 tries to answer such question by looking at country defining characteristics such as their population size to infer whether there exists a correlation against literacy levels. From the scatterplot below we can be conclude that the bigger the population of a country is the higher their literacy rates seem to be. Such correlation is however quite weak with many smaller countries such as Switzerland having close to 100% literacy rates and larger ones i.e., Germany having lower literacy of 83% despite the similarity of their economies. </p>  
   
-     <container class="bcontainer">
+  <container class="bcontainer">
      <!--Chart 21--> 
   <div class="chart" id="chart21">
   <script>
@@ -97,10 +97,12 @@
  <br>
  <br> 
  
-
- <iframe title="Context" aria-label="Map" id="datawrapper-chart-qhiB1" src="https://datawrapper.dwcdn.net/nVQ3m/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 80% !important; border: none;" height="284"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
- </script>
-
+ <!--Map--> 
+<container class="bcontainer">
+ <iframe title="Context" aria-label="Map" id="datawrapper-chart-nVQ3m" src="https://datawrapper.dwcdn.net/nVQ3m/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 60% !important; border: none;" height="383"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+ </container>       
+ <br>
+ <br> 
      
  <p> Figure 3 data was scraped from the World Population Review website then manually charted on Vega-Lite by inserting a dropdown feature to allow for greater details. China and India were outliers of the used dataset given their extremely high population sizes distorting the x-axix. For such reason I dropped them and limited the population range to 340,000 inhabitants, considered a better reflection of the average population size. </p>
     
